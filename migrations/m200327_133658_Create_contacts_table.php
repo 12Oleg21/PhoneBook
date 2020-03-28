@@ -108,7 +108,7 @@ class m200327_133658_Create_contacts_table extends Migration
         $this->createTable('Numbers',
             [
                 'id'            => $this->primaryKey(),
-                'number'        => $this->string(), // There is the string type because a number can be with "+" symbol
+                'number'        => $this->string(), // There is the string type because a number can be with "+, (, etc -" symbols
                 'contact_id'    => $this->integer()->notNull(),
                 'description'   => $this->text(),
             ]
