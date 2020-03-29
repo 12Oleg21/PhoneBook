@@ -62,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <?= Html::a('Cancel', ['index'] ,['class' => 'btn btn-default pull-right', 'style' => "margin-left: 5px;"])?>
+                    <?= Html::a('Cancel', ['index'] ,['class' => 'btn btn-default pull-right', 'style' => "margin-left: 5px;", 'name' => 'cansel-button'])?>
                     <?= Html::a('Edit', ['update', 'id' => $contact->id], ['class' => 'btn btn-primary pull-right', 'name' => 'edit-button']) ?>
                 </div>
             </div><!-- class="col-md-12"-->

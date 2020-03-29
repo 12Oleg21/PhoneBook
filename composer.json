@@ -17,7 +17,11 @@
         "php": ">=5.6.0",
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "wbraganca/yii2-dynamicform": "dev-master",
+        "nullref/yii2-datatables": "*",
+        "kartik-v/yii2-widgets": "*",
+        "yiisoft/yii2-jui": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -30,10 +34,8 @@
         "codeception/module-filesystem": "^1.0.0",
         "codeception/module-yii2": "^1.0.0",
         "codeception/module-asserts": "^1.0.0",
-        "wbraganca/yii2-dynamicform": "dev-master",
-        "nullref/yii2-datatables": "*",
-        "kartik-v/yii2-widgets": "*",
-        "yiisoft/yii2-jui": "*"
+        "codeception/module-webdriver": "*",
+        "codeception/module-db": "*"
     },
     "config": {
         "process-timeout": 1800,

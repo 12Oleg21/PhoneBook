@@ -66,6 +66,9 @@ class Contact extends \yii\db\ActiveRecord
         return $list;
     }
 
+    /*
+     * Add all numbers of contact to the model for showing in index table
+     */
     public function addNumbersToModel($contacts)
     {
         foreach($contacts as $contact){
@@ -79,6 +82,9 @@ class Contact extends \yii\db\ActiveRecord
         return $contacts;
     }
 
+    /*
+     * Forming Multiple model and count the diff of ID old model and new
+     */
     public function buildMultiple($patternlist, $pattern)
     {
         $oldIDs = ArrayHelper::map($patternlist, 'id', 'id');
@@ -88,6 +94,9 @@ class Contact extends \yii\db\ActiveRecord
         return [$deletedIDs, $patternlist];
     }
 
+    /*
+     * Merge all models for validation reason
+     */
     public function mergeAllArray($patternlist, $pattern)
     {
         return ArrayHelper::merge(
@@ -133,12 +142,22 @@ class Contact extends \yii\db\ActiveRecord
     }
 
     /*
+     * Delete main model Contact and all numbers for that model
+     */
+    public function delete()
+    {
+        foreach ($this->numbers as $number) {
+            $number->delete();
+        }
+        parent::delete();
+    }
+
+    /*
      *  Create a relationship with Number model
      */
     public function getNumbers()
     {
       return $this->hasMany(Number::className(), ['contact_id' => 'id']);
     }
-
 
 }

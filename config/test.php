@@ -12,6 +12,8 @@ return [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'homeUrl' => 'phonebook/index',
+    'defaultRoute' => 'contact/index',
     'language' => 'en-US',
     'components' => [
         'db' => $db,

@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'class' => 'yii\grid\ActionColumn',
                 'headerOptions' => ['style' => "width:60px"],
-                'footer' => Html::a('Add', ['create'], ['class' => 'btn btn-primary']),
+                'footer' => Html::a('Add', ['create'], ['class' => 'btn btn-primary', 'name' => 'add-button' ]),
             ],
         ],
         'showFooter' => true,

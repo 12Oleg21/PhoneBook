@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $contact->isNewRecord ? 'Create' : 'Update';
 
 ?>
 
+<h1><?= Html::encode($this->title) ?></h1>
 <div class="box box-default">
     <div class="box-body">
         <div class="row">
@@ -107,7 +108,7 @@ $this->params['breadcrumbs'][] = $contact->isNewRecord ? 'Create' : 'Update';
             <div class="col-md-12">
                 <div class="form-group">
                     <?= Html::a('Cancel', ['index'] ,['class' => 'btn btn-default pull-right', 'style' => "margin-left: 5px;"])?>
-                    <?= Html::submitButton($contact->isNewRecord ? 'Create': 'Update', ['class' => 'btn btn-primary pull-right']) ?>
+                    <?= Html::submitButton($contact->isNewRecord ? 'Create': 'Update', ['class' => 'btn btn-primary pull-right', 'id' => 'submit-button']) ?>
                 </div>
             </div><!-- class="col-md-12"-->
         </div><!--div class="row"-->
